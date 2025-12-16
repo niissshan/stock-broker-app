@@ -19,4 +19,29 @@ The application uses a **monorepo structure** with separate **frontend** and **b
 ---
 
 ## 📁 Project Structure
+stock-broker-app/
+│
+├── backend/
+│ ├── server.js
+│ ├── package.json
+│ └── node_modules/
+│
+├── frontend/
+│ ├── public/
+│ ├── src/
+│ │ ├── assets/
+│ │ ├── pages/
+│ │ │ ├── Auth.jsx
+│ │ │ ├── Auth.css
+│ │ │ ├── Dashboard.jsx
+│ │ │ └── Dashboard.css
+│ │ ├── App.jsx
+│ │ ├── App.css
+│ │ ├── main.jsx
+│ │ └── index.css
+│ ├── index.html
+│ ├── package.json
+│ └── vite.config.js
+│
+└── README.md
 
