@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 import "./Dashboard.css";
-const BASE_URL = "https://stock-broker-app.onrender.com/";
+const BASE_URL = "https://stock-broker-app.onrender.com";
+
 
 
 /* LOGOS */
