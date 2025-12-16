@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 import "./Dashboard.css";
+const BASE_URL = "https://stock-broker-app.onrender.com/";
+
 
 /* LOGOS */
 import amazonLogo from "../assets/amazon.png";
@@ -10,7 +12,8 @@ import metaLogo from "../assets/meta-facebook-rebranding-name-news_dezeen_2364_c
 import nvidiaLogo from "../assets/nvidia-logo-nvidia-icon-free-free-vector.jpg";
 import teslaLogo from "../assets/Tesla_Motors.svg.png";
 
-const socket = io("http://localhost:5000");
+const socket = io(BASE_URL);
+
 
 const STOCKS = {
   NVDA: { logo: nvidiaLogo },
@@ -38,7 +41,8 @@ export default function Dashboard() {
   useEffect(() => {
     if (!email) return;
 
-    fetch(`http://localhost:5000/api/subscriptions/${email}`)
+    fetch(`${BASE_URL}/api/subscriptions/${email}`)
+
       .then(res => res.json())
       .then(data => {
         if (data.subscriptions) {
@@ -69,7 +73,8 @@ export default function Dashboard() {
 
   /* ✅ BACKEND-CONNECTED SUBSCRIBE */
   const toggleSubscribe = async (ticker) => {
-    const res = await fetch("http://localhost:5000/api/subscribe", {
+    const res = await fetch(`${BASE_URL}/api/subscribe`, {
+
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, stock: ticker })
