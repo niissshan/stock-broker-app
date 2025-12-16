@@ -59,26 +59,27 @@ export default function Auth() {
       return;
     }
 
-    try {
-      if (isLogin) {
-       const res = await axios.post(`${BASE_URL}/api/signup`, {
-        name,
-        email,
-        password
-
-        });
-        localStorage.setItem("userEmail", res.data.email);
-        navigate("/dashboard");
-      } else {
-        await axios.post(`${BASE_URL}/api/signup`, {
-
-          email,
-          password
-        });
-        alert("Account created successfully");
-        setIsLogin(true);
-      }
-    } catch (err) {
+   try {
+  if (isLogin) {
+    // ✅ LOGIN
+    const res = await axios.post(`${BASE_URL}/api/login`, {
+      email,
+      password
+    });
+    localStorage.setItem("userEmail", res.data.email);
+    navigate("/dashboard");
+  } else {
+    // ✅ SIGNUP
+    await axios.post(`${BASE_URL}/api/signup`, {
+      name,
+      email,
+      password
+    });
+    alert("Account created successfully");
+    setIsLogin(true);
+  }
+ } 
+ catch (err) {
       alert(err.response?.data?.message || "Error occurred");
     }
   };
