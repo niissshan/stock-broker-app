@@ -2,7 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
-const BASE_URL = "https://stock-broker-app.onrender.com/";
+const BASE_URL = "https://stock-broker-app.onrender.com";
+
 
 export default function Auth() {
   const [isLogin, setIsLogin] = useState(true);
@@ -60,10 +61,11 @@ export default function Auth() {
 
     try {
       if (isLogin) {
-       const res = await axios.post(`${BASE_URL}/api/login`, {
+       const res = await axios.post(`${BASE_URL}/api/signup`, {
+        name,
+        email,
+        password
 
-          email,
-          password
         });
         localStorage.setItem("userEmail", res.data.email);
         navigate("/dashboard");
