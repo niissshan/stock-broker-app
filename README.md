@@ -124,6 +124,41 @@ The following outputs are included for reference:
 - Independent stock subscriptions per user
 
 (Screenshots will be attached below this section)
+## 📷 Application Screenshots
+
+### 📝 User Signup
+Shows the new user registration screen with validations.
+![Signup](screenshots/Signup.jpg)
+
+---
+
+### 🔐 User Login
+Login page where existing users authenticate.
+![Login Page](screenshots/loginpage.jpg)
+
+---
+
+### ✅ Email Validation
+Displays email format validation during authentication.
+![Email Validation](screenshots/Authenticate-mail.jpg)
+
+---
+
+### 🔑 Password Validation
+Shows password rule enforcement during signup/login.
+![Password Validation](screenshots/Authenticatepassword.jpg)
+
+---
+
+### 📊 Dashboard (Chrome Browser)
+Main dashboard displaying live stock prices and subscriptions in Chrome.
+![Dashboard Chrome](screenshots/chrome-dashboard.jpg)
+
+---
+
+### 📊 Dashboard (Brave Browser)
+Same dashboard accessed from a different browser, proving multi-user real-time updates.
+![Dashboard Brave](screenshots/brave-dashboard.jpg)
 
 ---
 
