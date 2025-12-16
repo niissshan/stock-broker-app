@@ -13,7 +13,11 @@ import metaLogo from "../assets/meta-facebook-rebranding-name-news_dezeen_2364_c
 import nvidiaLogo from "../assets/nvidia-logo-nvidia-icon-free-free-vector.jpg";
 import teslaLogo from "../assets/Tesla_Motors.svg.png";
 
-const socket = io(BASE_URL);
+const socket = io(BASE_URL, {
+  transports: ["websocket"],
+  secure: true
+});
+
 
 
 const STOCKS = {
